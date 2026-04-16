@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday My Everything</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Section 1: Title Screen -->
+  <section id="view-1" class="view active">
+    <div class="content">
+      <h1 class="title">Happy Birthday my Everything</h1>
+      <button class="btn primary-btn" onclick="nextView(2)">Tap to begin ❤️</button>
+    </div>
+  </section>
+
+  <!-- Section 2: Surprise Question -->
+  <section id="view-2" class="view">
+    <div class="content">
+      <h2 class="question">Ready to see a surprise?</h2>
+      <div class="button-group">
+        <button class="btn success-btn" onclick="nextView(3)">Yes!</button>
+        <button id="no-btn" class="btn danger-btn">No</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Gallery -->
+  <section id="view-3" class="view">
+    <div class="content">
+      <h2 class="subtitle">Just some of my favorite memories...</h2>
+      <div class="polaroid-gallery">
+        <div class="polaroid p1">
+          <img src="assets/polaroid_1.jpg" alt="Memory 1">
+          <div class="caption">rainy evening magic ♡</div>
+        </div>
+        <div class="polaroid p2">
+          <img src="assets/polaroid_2.jpg" alt="Memory 2">
+          <div class="caption">Coffee & Love</div>
+        </div>
+        <div class="polaroid p3">
+          <img src="assets/polaroid_3.jpg" alt="Memory 3">
+          <div class="caption">Starry Night</div>
+        </div>
+      </div>
+      <button class="btn primary-btn" onclick="nextView(4)">Read my letter 💌</button>
+    </div>
+  </section>
+
+  <!-- Section 4: Love Letter -->
+  <section id="view-4" class="view">
+    <div class="content">
+
+      <!-- Envelope Cover -->
+      <div id="envelope-cover" class="envelope-container">
+        <div class="envelope-visual">
+          <button class="open-letter-btn" onclick="openLetter()">Open 💌</button>
+        </div>
+      </div>
+
+      <!-- The Letter (Hidden until opened) -->
+      <div id="letter-content" class="letter-container hidden">
+        <div class="letter">
+          <p class="greeting">My dearest,</p>
+        <p>
+          I just wanted to take a moment today to remind you how incredibly special you are to me. 
+          Every single day with you feels like a beautiful adventure, and I wouldn't trade our moments 
+          together for anything in the world. 
+        </p>
+        <p>
+          You make me smile brighter, laugh louder, and love deeper. Wishing you the happiest of birthdays, 
+          filled with all the joy and love you bring into my life. Here's to making countless more memories together!
+        </p>
+        <p>I love you endlessly!</p>
+        <p class="signature">Yours always,</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="toast">Invalid option! 😉</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
